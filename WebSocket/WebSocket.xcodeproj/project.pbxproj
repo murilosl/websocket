@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97176938293C2C4800181E9C /* CryptoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97176937293C2C4800181E9C /* CryptoView.swift */; };
+		9717693A293C2DDF00181E9C /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97176939293C2DDF00181E9C /* CryptoTableViewCell.swift */; };
+		9717693C293C34FB00181E9C /* CryptoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717693B293C34FB00181E9C /* CryptoMock.swift */; };
+		9717693F293C3C1B00181E9C /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717693E293C3C1B00181E9C /* UIImageView+Extensions.swift */; };
+		97176941293C44A100181E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97176940293C44A100181E9C /* Main.storyboard */; };
+		97176943293C4C2200181E9C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97176942293C4C2200181E9C /* UIView+Extensions.swift */; };
+		97176945293C568500181E9C /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97176944293C568500181E9C /* WebSocket.swift */; };
 		97AAF17B293C037400D5482B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF17A293C037400D5482B /* AppDelegate.swift */; };
-		97AAF17D293C037400D5482B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF17C293C037400D5482B /* SceneDelegate.swift */; };
-		97AAF17F293C037400D5482B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF17E293C037400D5482B /* ViewController.swift */; };
-		97AAF182293C037400D5482B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97AAF180293C037400D5482B /* Main.storyboard */; };
 		97AAF184293C037600D5482B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97AAF183293C037600D5482B /* Assets.xcassets */; };
 		97AAF187293C037600D5482B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97AAF185293C037600D5482B /* LaunchScreen.storyboard */; };
 		97AAF192293C037600D5482B /* WebSocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF191293C037600D5482B /* WebSocketTests.swift */; };
 		97AAF19C293C037600D5482B /* WebSocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF19B293C037600D5482B /* WebSocketUITests.swift */; };
 		97AAF19E293C037600D5482B /* WebSocketUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF19D293C037600D5482B /* WebSocketUITestsLaunchTests.swift */; };
+		97AAF1B1293C18DB00D5482B /* CryptoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF1B0293C18DB00D5482B /* CryptoController.swift */; };
+		97AAF1B3293C191D00D5482B /* CryptoControllerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF1B2293C191D00D5482B /* CryptoControllerImpl.swift */; };
+		97AAF1B5293C194900D5482B /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF1B4293C194900D5482B /* Crypto.swift */; };
+		97AAF1B7293C19A800D5482B /* CryptoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF1B6293C19A800D5482B /* CryptoRepository.swift */; };
+		97AAF1B9293C19D900D5482B /* CryptoRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF1B8293C19D900D5482B /* CryptoRepositoryImpl.swift */; };
+		97AAF1BB293C1A5600D5482B /* CryptoUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF1BA293C1A5600D5482B /* CryptoUsecase.swift */; };
+		97AAF1BD293C1A7500D5482B /* CryptoUsecaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF1BC293C1A7500D5482B /* CryptoUsecaseImpl.swift */; };
+		97AAF1C3293C1B2800D5482B /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AAF1C2293C1B2800D5482B /* CryptoViewController.swift */; };
 		A364AD7AA8B9433E90E40609 /* Pods_WebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BF763A6114133A008F47C9 /* Pods_WebSocket.framework */; };
 		BB5FC580C7A9E99C3BD2A21D /* Pods_WebSocket_WebSocketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B6DA129D85453ED24D39D4 /* Pods_WebSocket_WebSocketUITests.framework */; };
 		D24E8E0B92D6CB3916FA433E /* Pods_WebSocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD09E1C9C75C919694ED43B /* Pods_WebSocketTests.framework */; };
@@ -43,11 +55,15 @@
 		2BA58F942E9686493497BD0F /* Pods-WebSocket-WebSocketUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocket-WebSocketUITests.debug.xcconfig"; path = "Target Support Files/Pods-WebSocket-WebSocketUITests/Pods-WebSocket-WebSocketUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		65B6DA129D85453ED24D39D4 /* Pods_WebSocket_WebSocketUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebSocket_WebSocketUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD09E1C9C75C919694ED43B /* Pods_WebSocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebSocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97176937293C2C4800181E9C /* CryptoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoView.swift; sourceTree = "<group>"; };
+		97176939293C2DDF00181E9C /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
+		9717693B293C34FB00181E9C /* CryptoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoMock.swift; sourceTree = "<group>"; };
+		9717693E293C3C1B00181E9C /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		97176940293C44A100181E9C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		97176942293C4C2200181E9C /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		97176944293C568500181E9C /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		97AAF177293C037400D5482B /* WebSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AAF17A293C037400D5482B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97AAF17C293C037400D5482B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		97AAF17E293C037400D5482B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		97AAF181293C037400D5482B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97AAF183293C037600D5482B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97AAF186293C037600D5482B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97AAF188293C037600D5482B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +72,14 @@
 		97AAF197293C037600D5482B /* WebSocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebSocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AAF19B293C037600D5482B /* WebSocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketUITests.swift; sourceTree = "<group>"; };
 		97AAF19D293C037600D5482B /* WebSocketUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		97AAF1B0293C18DB00D5482B /* CryptoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoController.swift; sourceTree = "<group>"; };
+		97AAF1B2293C191D00D5482B /* CryptoControllerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoControllerImpl.swift; sourceTree = "<group>"; };
+		97AAF1B4293C194900D5482B /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		97AAF1B6293C19A800D5482B /* CryptoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRepository.swift; sourceTree = "<group>"; };
+		97AAF1B8293C19D900D5482B /* CryptoRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRepositoryImpl.swift; sourceTree = "<group>"; };
+		97AAF1BA293C1A5600D5482B /* CryptoUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUsecase.swift; sourceTree = "<group>"; };
+		97AAF1BC293C1A7500D5482B /* CryptoUsecaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUsecaseImpl.swift; sourceTree = "<group>"; };
+		97AAF1C2293C1B2800D5482B /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
 		97BF763A6114133A008F47C9 /* Pods_WebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00037663BB76C1248ADACFB /* Pods-WebSocket-WebSocketUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocket-WebSocketUITests.release.xcconfig"; path = "Target Support Files/Pods-WebSocket-WebSocketUITests/Pods-WebSocket-WebSocketUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D6101492002831EEEF9D3CC2 /* Pods-WebSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebSocket.release.xcconfig"; path = "Target Support Files/Pods-WebSocket/Pods-WebSocket.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +125,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9717693D293C3BE300181E9C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9717693E293C3C1B00181E9C /* UIImageView+Extensions.swift */,
+				97176942293C4C2200181E9C /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		97AAF16E293C037400D5482B = {
 			isa = PBXGroup;
 			children = (
@@ -126,13 +159,14 @@
 		97AAF179293C037400D5482B /* WebSocket */ = {
 			isa = PBXGroup;
 			children = (
+				9717693D293C3BE300181E9C /* Extensions */,
+				97AAF1C4293C282800D5482B /* Socket */,
+				97AAF1AA293C050600D5482B /* Crypto */,
 				97AAF17A293C037400D5482B /* AppDelegate.swift */,
-				97AAF17C293C037400D5482B /* SceneDelegate.swift */,
-				97AAF17E293C037400D5482B /* ViewController.swift */,
-				97AAF180293C037400D5482B /* Main.storyboard */,
 				97AAF183293C037600D5482B /* Assets.xcassets */,
 				97AAF185293C037600D5482B /* LaunchScreen.storyboard */,
 				97AAF188293C037600D5482B /* Info.plist */,
+				97176940293C44A100181E9C /* Main.storyboard */,
 			);
 			path = WebSocket;
 			sourceTree = "<group>";
@@ -154,6 +188,72 @@
 			path = WebSocketUITests;
 			sourceTree = "<group>";
 		};
+		97AAF1AA293C050600D5482B /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				97AAF1AF293C186300D5482B /* view */,
+				97AAF1AE293C185A00D5482B /* usecase */,
+				97AAF1AD293C184F00D5482B /* repository */,
+				97AAF1AC293C184800D5482B /* model */,
+				97AAF1AB293C183C00D5482B /* controller */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		97AAF1AB293C183C00D5482B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				97AAF1B0293C18DB00D5482B /* CryptoController.swift */,
+				97AAF1B2293C191D00D5482B /* CryptoControllerImpl.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		97AAF1AC293C184800D5482B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				97AAF1B4293C194900D5482B /* Crypto.swift */,
+				9717693B293C34FB00181E9C /* CryptoMock.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		97AAF1AD293C184F00D5482B /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				97AAF1B6293C19A800D5482B /* CryptoRepository.swift */,
+				97AAF1B8293C19D900D5482B /* CryptoRepositoryImpl.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		97AAF1AE293C185A00D5482B /* usecase */ = {
+			isa = PBXGroup;
+			children = (
+				97AAF1BA293C1A5600D5482B /* CryptoUsecase.swift */,
+				97AAF1BC293C1A7500D5482B /* CryptoUsecaseImpl.swift */,
+			);
+			path = usecase;
+			sourceTree = "<group>";
+		};
+		97AAF1AF293C186300D5482B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				97AAF1C2293C1B2800D5482B /* CryptoViewController.swift */,
+				97176937293C2C4800181E9C /* CryptoView.swift */,
+				97176939293C2DDF00181E9C /* CryptoTableViewCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		97AAF1C4293C282800D5482B /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				97176944293C568500181E9C /* WebSocket.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
 		A810364FECA1D1DC0B6BD309 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +264,6 @@
 				E13B83F86E62607EC60A3F35 /* Pods-WebSocketTests.debug.xcconfig */,
 				1E03E51478C2A410BC7AC1D0 /* Pods-WebSocketTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -275,9 +374,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97176941293C44A100181E9C /* Main.storyboard in Resources */,
 				97AAF187293C037600D5482B /* LaunchScreen.storyboard in Resources */,
 				97AAF184293C037600D5482B /* Assets.xcassets in Resources */,
-				97AAF182293C037400D5482B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,9 +470,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97AAF17F293C037400D5482B /* ViewController.swift in Sources */,
+				97176943293C4C2200181E9C /* UIView+Extensions.swift in Sources */,
+				97AAF1B5293C194900D5482B /* Crypto.swift in Sources */,
+				97AAF1B7293C19A800D5482B /* CryptoRepository.swift in Sources */,
+				9717693C293C34FB00181E9C /* CryptoMock.swift in Sources */,
+				97176945293C568500181E9C /* WebSocket.swift in Sources */,
+				97AAF1BD293C1A7500D5482B /* CryptoUsecaseImpl.swift in Sources */,
+				97AAF1BB293C1A5600D5482B /* CryptoUsecase.swift in Sources */,
+				97AAF1C3293C1B2800D5482B /* CryptoViewController.swift in Sources */,
+				97AAF1B3293C191D00D5482B /* CryptoControllerImpl.swift in Sources */,
+				9717693F293C3C1B00181E9C /* UIImageView+Extensions.swift in Sources */,
 				97AAF17B293C037400D5482B /* AppDelegate.swift in Sources */,
-				97AAF17D293C037400D5482B /* SceneDelegate.swift in Sources */,
+				9717693A293C2DDF00181E9C /* CryptoTableViewCell.swift in Sources */,
+				97AAF1B9293C19D900D5482B /* CryptoRepositoryImpl.swift in Sources */,
+				97176938293C2C4800181E9C /* CryptoView.swift in Sources */,
+				97AAF1B1293C18DB00D5482B /* CryptoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,14 +521,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		97AAF180293C037400D5482B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				97AAF181293C037400D5482B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		97AAF185293C037600D5482B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
