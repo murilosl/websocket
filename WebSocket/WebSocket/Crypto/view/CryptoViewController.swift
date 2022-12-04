@@ -18,7 +18,8 @@ class CryptoViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCryptoView()
-        webSocket = WebSocket(url: WebSocket.url, delegate: self)
+        webSocket = WebSocket(url: WebSocketConstants.url, delegate: self)
+        webSocket.delegateMessage = self
     }
     
     override func loadView() {
@@ -80,5 +81,11 @@ extension CryptoViewController : URLSessionWebSocketDelegate{
     
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
         print("Disconnect Server")
+    }
+}
+
+extension CryptoViewController : WebSocketMessageDelegate {
+    func onMessage(text: String) {
+        print(text)
     }
 }

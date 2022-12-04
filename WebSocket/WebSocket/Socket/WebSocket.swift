@@ -7,11 +7,15 @@
 
 import Foundation
 
+protocol WebSocketMessageDelegate {
+    func onMessage(text: String)
+}
+
 class WebSocket{
     
     private var webSocket: URLSessionWebSocketTask?
-    static let url = "ws://api.foxbit.com.br?origin=android"
-    static let getInstrumentId = "{\"m\":0,\"i\":0,\"n\":\"getInstruments\",\"o\":\"{}\"}"
+    
+    var delegateMessage: WebSocketMessageDelegate?
     
     init(url: String, delegate: URLSessionDelegate) {
         let session = URLSession(configuration: .default, delegate: delegate, delegateQueue: OperationQueue())
@@ -38,9 +42,9 @@ class WebSocket{
                     case .data(let data):
                         print("Data received \(data)")
                         
-                    case .string(let strMessgae):
-                    print("String received \(strMessgae)")
-                        
+                    case .string(let strMessage):
+                        print("String received \(strMessage)")
+                        self!.delegateMessage?.onMessage(text: strMessage)
                     default:
                         break
                     }
@@ -59,8 +63,7 @@ class WebSocket{
       
       let workItem = DispatchWorkItem{
           
-          self.webSocket?.send(URLSessionWebSocketTask.Message.string(WebSocket.getInstrumentId), completionHandler: { error in
-              
+          self.webSocket?.send(URLSessionWebSocketTask.Message.string(WebSocketConstants.getInstrumentId), completionHandler: { error in
               
               if error == nil {
                   self.send()
