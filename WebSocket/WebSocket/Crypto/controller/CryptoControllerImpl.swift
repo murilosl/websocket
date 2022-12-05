@@ -8,13 +8,8 @@
 import Foundation
 
 class CryptoControllerImpl : CryptoController{
-    func send() {
-        
+    func prepareCoins(crypto: String) -> [Coin] {
+        let useCase = CryptoUsecaseImpl()
+        return useCase.prepareCoins(crypto: crypto)
     }
-    
-    func receive() {
-        
-    }
-    
-    
 }

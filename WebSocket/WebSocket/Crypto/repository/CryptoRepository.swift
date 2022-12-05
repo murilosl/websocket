@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CryptoRepository{
-    func listAll() -> [Crypto]
+    func prepareCoins(crypto: String) -> [Coin]
 }

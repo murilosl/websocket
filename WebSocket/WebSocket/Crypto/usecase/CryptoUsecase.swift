@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CryptoUsecase{
-    func listAll() -> [Crypto]
+    func prepareCoins(crypto: String) -> [Coin]
 }

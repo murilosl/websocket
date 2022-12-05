@@ -79,12 +79,16 @@ class CryptoTableViewCell : UITableViewCell {
         super.awakeFromNib()
     }
     
-    func populate(crypto: Crypto) {
-        image.load(url: crypto.image!)
-        title.text = crypto.title
-        subTitle.text = crypto.subTitle
-        variation.text = crypto.variation
-        price.text = crypto.price
+    func populate(coin: Coin) {
+        if let imageLoad = UIImage(named: String(coin.InstrumentId)) {
+            image.image = imageLoad
+        } else {
+            image.image =  UIImage(named: "6")
+        }
+        title.text = coin.Product1Symbol
+        subTitle.text = coin.Product1Symbol
+        variation.text = "+1"
+        price.text = "R$ 1,00"
         setupUI()
         setupConstraints()
     }

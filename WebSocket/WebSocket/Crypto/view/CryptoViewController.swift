@@ -10,8 +10,7 @@ import UIKit
 
 class CryptoViewController : UIViewController{
     
-    var crypto: [Crypto]!
-    var mock = CrytoMock.getCrypto()
+    var coins: [Coin]?
     var webSocket: WebSocket!
     let cryptoView = CryptoView()
     
@@ -43,7 +42,7 @@ extension CryptoViewController : UITableViewDelegate{
 
 extension CryptoViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mock.count
+        return self.coins?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,8 +51,9 @@ extension CryptoViewController : UITableViewDataSource{
             
             if let cell = tableView.dequeueReusableCell(withIdentifier: CryptoTableViewCell.idCell, for: indexPath) as? CryptoTableViewCell {
 
-                let item = mock[indexPath.row]
-                cell.populate(crypto: item)
+                if let coin = self.coins?[indexPath.row] {
+                    cell.populate(coin: coin)
+                }
 
                 return cell
                 
@@ -86,6 +86,10 @@ extension CryptoViewController : URLSessionWebSocketDelegate{
 
 extension CryptoViewController : WebSocketMessageDelegate {
     func onMessage(text: String) {
-        print(text)
+       let controller = CryptoControllerImpl()
+       self.coins = controller.prepareCoins(crypto: text)
+        DispatchQueue.main.async {
+            self.cryptoView.tableView.reloadData()
+        }
     }
 }

@@ -8,6 +8,5 @@
 import Foundation
 
 protocol CryptoController {
-    func send()
-    func receive()
+    func prepareCoins(crypto: String) -> [Coin]
 }

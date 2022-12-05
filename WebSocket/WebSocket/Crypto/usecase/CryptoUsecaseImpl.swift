@@ -9,16 +9,9 @@ import Foundation
 
 class CryptoUsecaseImpl : CryptoUsecase{
     
-    var repository: CryptoRepository!
-
-    func CryptoUsecaseImpl(repository: CryptoRepository) {
-        self.repository = repository
-    }
-    
-    func listAll() -> [Crypto] {
-        let cryptoList = repository.listAll()
+    func prepareCoins(crypto: String) -> [Coin] {
+        let repository = CryptoRepositoryImpl()
+        let cryptoList = repository.prepareCoins(crypto: crypto)
         return cryptoList
     }
-    
-    
 }
