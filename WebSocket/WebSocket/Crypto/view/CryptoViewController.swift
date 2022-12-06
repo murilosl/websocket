@@ -11,6 +11,8 @@ import UIKit
 class CryptoViewController : UIViewController{
     
     var coins: [Coin]?
+    var cotation: [Cotation]?
+
     var webSocket: WebSocket!
     let cryptoView = CryptoView()
     
@@ -87,9 +89,18 @@ extension CryptoViewController : URLSessionWebSocketDelegate{
 extension CryptoViewController : WebSocketMessageDelegate {
     func onMessage(text: String) {
        let controller = CryptoControllerImpl()
-       self.coins = controller.prepareCoins(crypto: text)
-        DispatchQueue.main.async {
-            self.cryptoView.tableView.reloadData()
+        
+        if CryptoRepositoryImpl.coins.count > 0 {
+            self.coins = controller.prepareCoins(crypto: text)
+             DispatchQueue.main.async {
+                 self.cryptoView.tableView.reloadData()
+             }
+        } else {
+            self.cotation = controller.reloadCoin(coin: text)
+            let rowNumber = self.cotation?.first?.InstrumentId
+            let indexPath = IndexPath(item: rowNumber!, section: 0)
+            self.cryptoView.tableView.reloadRows(at: [indexPath], with: .none)
         }
+       
     }
 }

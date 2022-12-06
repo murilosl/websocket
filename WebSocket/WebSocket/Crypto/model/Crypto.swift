@@ -28,6 +28,7 @@ struct Coin: Decodable {
 }
 
 struct Cotation: Decodable {
+    let InstrumentId: Int
     let LastTradedPx: String
     let Rolling24HrPxChange: String
 }

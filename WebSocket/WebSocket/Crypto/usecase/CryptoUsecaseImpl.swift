@@ -9,8 +9,14 @@ import Foundation
 
 class CryptoUsecaseImpl : CryptoUsecase{
     
+    let repository = CryptoRepositoryImpl()
+
+    func reloadCoin(coin: String) -> [Cotation] {
+        let cotation = repository.reloadCoin(coin: coin)
+        return cotation
+    }
+    
     func prepareCoins(crypto: String) -> [Coin] {
-        let repository = CryptoRepositoryImpl()
         let cryptoList = repository.prepareCoins(crypto: crypto)
         return cryptoList
     }
