@@ -26,3 +26,9 @@ struct Coin: Decodable {
     let Product1Symbol: String
     let InstrumentId: Int
 }
+
+struct Cotation: Decodable {
+    let InstrumentId: Int
+    let LastTradedPx: String
+    let Rolling24HrPxChange: String
+}

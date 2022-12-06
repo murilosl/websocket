@@ -63,7 +63,16 @@ class WebSocket{
       
       let workItem = DispatchWorkItem{
           
-          self.webSocket?.send(URLSessionWebSocketTask.Message.string(WebSocketConstants.getInstrumentId), completionHandler: { error in
+          var query = WebSocketConstants.getInstrumentId
+          let coins = CryptoRepositoryImpl.coins
+          if coins.count > 0 {
+              let randomQuery = coins.randomElement()
+              if let id = randomQuery?.InstrumentId {
+                  query = QuerySupport.instrument(id: id)
+              }
+          }
+          
+          self.webSocket?.send(URLSessionWebSocketTask.Message.string(query), completionHandler: { error in
               
               if error == nil {
                   self.send()

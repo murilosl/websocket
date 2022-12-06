@@ -8,8 +8,14 @@
 import Foundation
 
 class CryptoControllerImpl : CryptoController{
+    
+    let useCase = CryptoUsecaseImpl()
+    
+    func reloadCoin(coin: String) -> [Cotation] {
+        return useCase.reloadCoin(coin: coin)
+    }
+    
     func prepareCoins(crypto: String) -> [Coin] {
-        let useCase = CryptoUsecaseImpl()
         return useCase.prepareCoins(crypto: crypto)
     }
 }

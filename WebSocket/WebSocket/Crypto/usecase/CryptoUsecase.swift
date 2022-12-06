@@ -9,4 +9,5 @@ import Foundation
 
 protocol CryptoUsecase{
     func prepareCoins(crypto: String) -> [Coin]
+    func reloadCoin(coin: String) -> [Cotation]
 }
